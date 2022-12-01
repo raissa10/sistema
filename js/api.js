@@ -13,7 +13,7 @@ function getUrlBase(port) {
     }
 
     if(isLocal()){
-        return "http://localhost/sistema/api.php/" + port;
+        return "http://localhost/sistema/api/api.php/" + port;
     }
 
     return "https://apiphpsenac.herokuapp.com/api.php/" + port;
