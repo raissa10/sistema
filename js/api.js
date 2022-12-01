@@ -1,9 +1,8 @@
-function isLocal(){
+function isLocal() {
     return true;
 }
 
-
-function isSupaBase(){
+function isSupaBase() {
     return false;
 }
 
@@ -12,7 +11,7 @@ function getUrlBase(port) {
         port = "ping";
     }
 
-    if(isLocal()){
+    if (isLocal()) {
         return "http://localhost/sistema/api/api.php/" + port;
     }
 
@@ -20,14 +19,14 @@ function getUrlBase(port) {
 }
 
 function getHeaders() {
-    if(isSupaBase()){
+    if (isSupaBase()) {
         return getHeadersSupabase();
     }
 
     return new Headers({
         "Accept": "Application/json",
         "apikey": getToken(),
-        "Content-Type":"application/json"
+        "Content-Type": "application/json"
     });
 }
 
@@ -59,7 +58,7 @@ function getMyInitFetchApi(method, body) {
             mode: 'cors',
             cache: 'default',
             body: JSON.stringify(body)
-            //body:body
+                //body:body
         };
     }
 

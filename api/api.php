@@ -10,6 +10,7 @@ require_once("core/Utils.php");
 
 require_once("controllers/ControllerApiBase.php");
 require_once("controllers/ControllerApiUsuario.php");
+require_once("controllers/ControllerApiSistema.php");
 
 class Routes {
 
@@ -62,6 +63,14 @@ class Routes {
             
             $app->put('/updatepassword', ControllerApiUsuario::class . ':updatePassword');
             $app->post('/resetpassword', ControllerApiUsuario::class . ':resetPassword');
+
+            // AULA 01-12-2022
+            // Pagina inicial da api
+            $app->get('/sistema', ControllerApiSistema::class . ':callPing');
+            $app->get('/usuario', ControllerApiSistema::class . ':getUsuario');
+            $app->get('/pessoa', ControllerApiSistema::class . ':getPessoa');
+            $app->get('/produto', ControllerApiSistema::class . ':getProduto');
+
             
         })->add($this->getMiddlewares());
 
