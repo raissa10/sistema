@@ -9,7 +9,6 @@ require_once "lib/slim/autoload.php";
 require_once("core/Utils.php");
 
 require_once("controllers/ControllerApiBase.php");
-require_once("controllers/ControllerApiFolhaPagamento.php");
 require_once("controllers/ControllerApiUsuario.php");
 
 class Routes {
@@ -99,33 +98,6 @@ class Routes {
         $Middlware = function (Request $request, Response $response, $next) {
             
             $headers = $request->getHeaders();
-            
-            if(isset($headers["HTTP_APIKEY"]) && is_array($headers["HTTP_APIKEY"])){
-                $token = $headers["HTTP_APIKEY"][0];
-                if (trim($token) == "") {
-                    $data = array("message" => "Acesso inválido - TOKEN - Envio:" . $token);
-                    return $response->withJson($data, 401);
-                }
-            
-                // Verifica se esse token de usuario existe
-                if (!Routes::isValidTokenUsuario($token)) {
-                    $data = array("message" => "Token inválido", "token informado:" => $token);
-                    return $response->withJson($data, 401);
-                }
-
-                // Verifica se a data e valida
-                if (!Routes::isValidTokenUsuarioPorData($token)) {
-                    $dadosToken = decodeToken($token);
-
-                    $data = array("message" => "Token expirado!", "token informado:" => $dadosToken);
-
-                    return $response->withJson($data, 401);
-                }
-            
-            } else {
-                $data = array("message" => "Token inválido!");
-                return $response->withJson($data, 401);
-            }
 
             $response = $next($request, $response);
 
@@ -133,38 +105,8 @@ class Routes {
         };
 
         return $Middlware;
-    }
-    
-    public static function isValidTokenUsuarioPorData($token) {
+    }    
 
-        $dadosToken = decodeToken($token);
-
-        $dataAtual = date("Y-m-d");
-
-        $dataToken = $dadosToken->data;
-
-        if($dataToken == $dataAtual){
-            return true;
-        }
-        
-        return false;
-    }
-
-    public static function isValidTokenUsuario($token) {
-        require_once("core/Query.php");
-        $oQuery = new Query();
-        
-        $aDados = $oQuery->select("select usutoken as token
-                                     from tbusuario
-                                    where tbusuario.usutoken = '$token'
-                                      and coalesce(tbusuario.usuativo, 0) = 1");
-        
-        if (!$aDados) {
-            return false;
-        }
-        
-        return true;
-    }
 }
 
 $routes = new Routes();

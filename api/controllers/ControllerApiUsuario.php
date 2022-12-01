@@ -9,7 +9,7 @@ use Psr\Http\Message\ResponseInterface as Response;
  * Date: 29/11/2022
  * Time: 10:15
  */
-require_once ("../core/token.php");
+require_once ("./core/token.php");
 require_once ("model/Usuario.php");
 
 class ControllerApiUsuario extends ControllerApiBase {
