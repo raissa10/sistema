@@ -12,6 +12,11 @@
 
 <style>
 
+    body {
+        display: flex;
+        flex-direction: column;    
+    }
+
     .title {
         text-align: center;
     }
@@ -33,11 +38,48 @@
         width:100%;
     }
 
+    ul, li {
+        list-style: none;
+        text-decoration: none;
+        width: 100%;
+        border-radius: 3px;
+        text-align: center;
+        color: aliceblue;        
+        display: flex;
+        transition: .4s all ease-in-out;
+        gap:5px;
+    }    
+
+    li {
+        padding: 4px;        
+    }
+    
+    ul, li:hover {
+        background-color: #4125641a;
+        cursor: pointer;
+    }
+
 </style>
 <body>
+   <menu>
+        <ul>
+            <li>Usuário</li>
+            <li>Pessoa</li>
+            <li>Produto</li>                
+        </ul>
+    </menu>
     <div class="container">
+        <menu>
+            <ul>
+                <li>Usuário</li>
+                <li>Pessoa</li>
+                <li>Produto</li>                
+            </ul>
+        </menu>
+        <!-- Cadastro Usuario -->        
         <div class="forms">
             <div class="form-content">
+                <h1>Usuários</h1>
                 <div class="login-form" style="display:none;">
                     <div class="title">Cadastro Usuário</div>
                     <div class="input-boxes">
