@@ -14,12 +14,19 @@
 
     body {
         display: flex;
-        flex-direction: column;    
+        flex-direction: column;  
+        justify-content: space-evenly;  
     }
 
     .title {
         text-align: center;
     }
+
+    .forms .form-content {
+        height: 70vh;
+        width:90%;
+    }
+
     .forms .form-content .title:before {
         content: '';
         position: absolute;
@@ -36,6 +43,10 @@
 
     .form-content .login-form, .form-content {
         width:100%;
+    }
+
+    menu {
+        background-color: #441581;
     }
 
     ul, li {
