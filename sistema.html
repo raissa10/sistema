@@ -29,12 +29,36 @@
             document.querySelector("#resultado").innerHTML = JSON.stringify(data);
         });
     }
+
+    function usuario() {
+        var metodo = "GET";
+        var porta = "usuario";
+        var body = undefined;
+
+        callApi(metodo, porta, body, function(data) {
+            // retorno da api sendo setado no campo de resultado
+            document.querySelector("#resultado").innerHTML = JSON.stringify(data);
+        });
+    }
+
+    function produto() {
+        var metodo = "GET";
+        var porta = "produto";
+        var body = undefined;
+
+        callApi(metodo, porta, body, function(data) {
+            // retorno da api sendo setado no campo de resultado
+            document.querySelector("#resultado").innerHTML = JSON.stringify(data);
+        });
+    }
 </script>
 
 <body>
     <hr>
     <button onclick="ping()">ping</button>
+    <button onclick="usuario()">usuario</button>
     <button onclick="pessoa()">pessoa</button>
+    <button onclick="produto()">produto</button>
     <hr>
     <h1>Resultado</h1>
     <span id="resultado">Resultado...</span>
