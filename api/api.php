@@ -32,7 +32,6 @@ class Routes {
             $response = $next($req, $res);
             
             return $response
-                // ->withHeader('Access-Control-Allow-Origin', 'https://atividades-senac-gelvazio.vercel.app')
                 // Aceita todas as origens
                 ->withHeader('Access-Control-Allow-Origin', '*')
                 // Aceita somente os atributos headers desta lista abaixo
@@ -71,6 +70,10 @@ class Routes {
             $app->get('/pessoa', ControllerApiSistema::class . ':getPessoa');
             $app->get('/produto', ControllerApiSistema::class . ':getProduto');
 
+            // AULA 12-12-2022
+            // Consultas com filtros
+            $app->post('/consultausuario', ControllerApiSistema::class . ':getConsultaUsuario');
+            
             
         })->add($this->getMiddlewares());
 
@@ -114,7 +117,7 @@ class Routes {
         };
 
         return $Middlware;
-    }    
+    }
 
 }
 

@@ -26,7 +26,7 @@ function getHeaders() {
     return new Headers({
         "Accept": "Application/json",
         "apikey": getToken(),
-        "Content-Type": "application/json"
+        "Content-Type": "Application/json"
     });
 }
 
