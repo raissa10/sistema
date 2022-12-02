@@ -84,8 +84,6 @@ class ControllerApiSistema extends ControllerApiBase {
         $aDados = $this->getQuery()->selectAll($sSql);
         
         return $response->withJson($aDados, 200);
-        
-        // return $response->withJson(array("sql" => $sSql, "campo" => $valorfiltro), 200);
     }
     
 }
