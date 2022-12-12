@@ -85,7 +85,7 @@ class Routes {
             $app->post('/excluirusuario', ControllerApiSistema::class . ':excluirUsuario');
 
             // Alterar Usuário
-            $app->post('/executaalteracao', ControllerApiSistema::class . ':alteraUsuario');
+            $app->post('/executaalteracao', ControllerApiSistema::class . ':alterarUsuario');
 
             // Acoes a desenvolver na aula
 

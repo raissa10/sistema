@@ -139,7 +139,6 @@ class ControllerApiSistema extends ControllerApiBase {
         return $response->withJson($aDados, 200);
     }
 
-    //excluirUsuario
     public function excluirUsuario(Request $request, Response $response, array $args){
         $body = $request->getParsedBody();
         
@@ -158,8 +157,7 @@ class ControllerApiSistema extends ControllerApiBase {
         return $response->withJson(array("status" => false, "mensagem" => "Não foi informado o código do usuario parametro [usucodigo]"), 200);
     }
 
-    //alterarUsuario
-    public function alteraUsuario(Request $request, Response $response, array $args){
+    public function alterarUsuario(Request $request, Response $response, array $args){
         $body = $request->getParsedBody();
 
         $usucodigo = isset($body["usucodigo"]) ? $body["usucodigo"] : false;
