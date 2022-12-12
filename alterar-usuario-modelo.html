@@ -90,12 +90,11 @@
         var body = {
             usucodigo: codigo,
             usunome: nome,
-            usuemail: codigo,
+            usuemail: email,
             usuativo: situacao
         };
 
         callApi(metodo, porta, body, function(data) {
-            // Carrega os dados do usuario na tabela html
             alert(data.mensagem);
 
             if(data.status){
