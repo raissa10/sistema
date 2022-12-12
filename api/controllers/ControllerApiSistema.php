@@ -137,25 +137,55 @@ class ControllerApiSistema extends ControllerApiBase {
         $aDados = $this->getQuery()->selectAll($sSql);
 
         return $response->withJson($aDados, 200);
-        
-        // //
-        // $mensagem = " Sem erros";
-        // try {
-        //     $aDados = $this->getQuery()->selectAll($sSql);
-        // } catch(Exception $e){
-        //     $mensagem = " Mensagem de erro!" . $e->getMessage();
-        // }
-
-        // if(isset($aDados) && count($aDados)){
-        //     return $response->withJson($aDados, 200);
-        // }
-
-        // $aDados = array("status" => false,
-        //                 "mensagem" =>$mensagem ,
-        //                 "sqlgerado" => $sSql);
-
-        // return $response->withJson($aDados, 200);
     }
 
+    //excluirUsuario
+    public function excluirUsuario(Request $request, Response $response, array $args){
+        $body = $request->getParsedBody();
+        
+        $usucodigo = isset($body["usucodigo"]) ? $body["usucodigo"] : false;
+        
+        if($usucodigo && intval($usucodigo) > 1){
+            $executaQuery = $this->getQuery()->executaQuery("delete from tbusuario where usucodigo = $usucodigo");
+            
+            if($executaQuery){
+                return $response->withJson(array("status" => true, "mensagem" => "Registro excluido com sucesso!"), 200);
+            }
+            
+            return $response->withJson(array("status" => false, "mensagem" => "Erro ao excluir registro do usuario de codigo = $usucodigo"), 200);
+        }
+        
+        return $response->withJson(array("status" => false, "mensagem" => "Não foi informado o código do usuario parametro [usucodigo]"), 200);
+    }
+
+    //alterarUsuario
+    public function alteraUsuario(Request $request, Response $response, array $args){
+        $body = $request->getParsedBody();
+
+        $usucodigo = isset($body["usucodigo"]) ? $body["usucodigo"] : false;
+        $usunome  = $body["usunome"];
+        $usuemail = $body["usuemail"];
+        $ususenha = $body["ususenha"];
+        $usuativo = intval($body["usuativo"]);
+        
+        if($usucodigo && intval($usucodigo) > 1){
+            $sql_update_usuario = "UPDATE public.tbusuario SET 
+                                          usunome  = '$usunome',
+                                          usuemail = '$usuemail',
+                                          ususenha = '$ususenha',
+                                          usuativo = $usuativo,
+                                    WHERE usucodigo = $usucodigo";
+
+            $executaQuery = $this->getQuery()->executaQuery($sql_update_usuario);
+            
+            if($executaQuery){
+                return $response->withJson(array("status" => true, "mensagem" => "Registro alterado com sucesso!"), 200);
+            }
+            
+            return $response->withJson(array("status" => false, "mensagem" => "Erro ao alterar registro do usuario de codigo = $usucodigo"), 200);
+        }
+        
+        return $response->withJson(array("status" => false, "mensagem" => "Não foi informado o código do usuario parametro [usucodigo]"), 200);
+    }
 
 }
