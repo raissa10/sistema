@@ -46,3 +46,10 @@ https://tecnospeed.com.br/boleto/
 # Documentacao 
 https://docs.plugnotas.com.br/
 
+Api notas free de testes 
+
+http://swagger.plugnotas.com.br/
+
+Emitindo boleto com Asas
+https://www.asaas.com/?utm_source=blog&utm_medium=enotas
+
