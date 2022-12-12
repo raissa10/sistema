@@ -34,3 +34,15 @@ https://api.portaldatransparencia.gov.br/api-de-dados/auxilio-emergencial-benefi
 Precisa do gov.br e cota do tipo prata, 
 Passar para alunos uma chave pronta
 
+# Deploy app php via app Infinity
+https://app.infinityfree.net/login
+
+# Deploy via PHP 
+https://www.000webhost.com/members/website/list
+
+# API de Boletos Tecnospeed
+https://tecnospeed.com.br/boleto/
+
+# Documentacao 
+https://docs.plugnotas.com.br/
+
