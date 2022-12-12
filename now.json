@@ -6,7 +6,7 @@
       "config": {
         "composer": true,
         "php.ini": {
-		  "pgsql":1
+          "pgsql": 1
         }
       }
     }
