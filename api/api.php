@@ -72,15 +72,22 @@ class Routes {
             $app->get('/pessoa', ControllerApiSistema::class . ':getPessoa');
             $app->get('/produto', ControllerApiSistema::class . ':getProduto');
 
-            $app->post('/consultausuariofiltro', ControllerApiSistema::class . ':getConsultaUsuarioFiltro');
-
+            
             // AULA 12-12-2022
             // Consultas com filtros
             $app->post('/consultausuario', ControllerApiSistema::class . ':getConsultaUsuario');
+
+            // Consulta com Filtros feita na aula...
+            $app->post('/consultausuariofiltro', ControllerApiSistema::class . ':getConsultaUsuarioFiltro');
             
             // AULA 13-12-2022 - Ações da Consulta
+            // Excluir Usuário
             $app->post('/excluirusuario', ControllerApiSistema::class . ':excluirUsuario');
+
+            // Alterar Usuário
             $app->post('/executaalteracao', ControllerApiSistema::class . ':alteraUsuario');
+
+            // Acoes a desenvolver na aula
 
         })->add($this->getMiddlewares());
 
