@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8dcb0b7c-650f-410a-a71d-ef218e61e828" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/api/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackaton/documentacao.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackaton/swagger.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,11 +14,15 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2IY6JN7t7KOLvIofL6RvexGHl0f" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="false" />
@@ -30,7 +32,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hackaton-alex-swagger" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -43,6 +45,7 @@
       <updated>1670346097043</updated>
       <workItem from="1670346098579" duration="48000" />
       <workItem from="1670346285381" duration="894000" />
+      <workItem from="1670862967696" duration="722000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <created>1670346108165</created>
@@ -51,13 +54,22 @@
       <option name="project" value="LOCAL" />
       <updated>1670346108165</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ok">
+      <created>1670862984603</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670862984603</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="ok" />
     <option name="LAST_COMMIT_MESSAGE" value="ok" />
   </component>

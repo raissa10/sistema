@@ -66,15 +66,21 @@ class Routes {
             // AULA 01-12-2022
             // Pagina inicial da api
             $app->get('/sistema', ControllerApiSistema::class . ':callPing');
+            
             $app->get('/usuario', ControllerApiSistema::class . ':getUsuario');
+
             $app->get('/pessoa', ControllerApiSistema::class . ':getPessoa');
             $app->get('/produto', ControllerApiSistema::class . ':getProduto');
+
+            $app->post('/consultausuariofiltro', ControllerApiSistema::class . ':getConsultaUsuarioFiltro');
+
+            
 
             // AULA 12-12-2022
             // Consultas com filtros
             $app->post('/consultausuario', ControllerApiSistema::class . ':getConsultaUsuario');
             
-            
+
         })->add($this->getMiddlewares());
 
         $app->run();
