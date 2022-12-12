@@ -28,4 +28,9 @@ https://sandbox.boletocloud.com/api
 
 3 - Criar a consulta de boletos emitidos
 
+# Api de Auxilio Emergencial 
+https://api.portaldatransparencia.gov.br/api-de-dados/auxilio-emergencial-beneficiario-por-municipio
+
+Precisa do gov.br e cota do tipo prata, 
+Passar para alunos uma chave pronta
 
