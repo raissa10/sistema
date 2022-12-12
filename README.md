@@ -53,3 +53,6 @@ http://swagger.plugnotas.com.br/
 Emitindo boleto com Asas
 https://www.asaas.com/?utm_source=blog&utm_medium=enotas
 
+# opcoes free
+https://enotas.com.br/blog/gerar-boleto-online-automatico/
+
