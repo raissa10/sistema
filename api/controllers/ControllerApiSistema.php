@@ -86,9 +86,7 @@ class ControllerApiSistema extends ControllerApiBase {
         return $response->withJson($aDados, 200);
     }
  
-    // getConsultaUsuarioFiltro
     public function getConsultaUsuarioFiltro(Request $request, Response $response, array $args) {
-        // Teste campos do front-end
         $body = $request->getParsedBody();
         
         $campofiltro    = isset($body["campofiltro"]) ? $body["campofiltro"] : false;
@@ -132,15 +130,15 @@ class ControllerApiSistema extends ControllerApiBase {
 
             // Somente adiciona filtros se o operador for diferente de todos
             if($operadorfiltro != "todos"){
-                $sSql = "SELECT * FROM tbusuario WHERE $campofiltro $operadorfiltro $valorfiltro ORDER BY 1";                
+                $sSql = "SELECT * FROM tbusuario WHERE $campofiltro $operadorfiltro $valorfiltro ORDER BY 1";
             }
         }
 
         $aDados = $this->getQuery()->selectAll($sSql);
 
-        return $response->withJson($aDados, 200);   
+        return $response->withJson($aDados, 200);
         
-        // // 
+        // //
         // $mensagem = " Sem erros";
         // try {
         //     $aDados = $this->getQuery()->selectAll($sSql);
@@ -152,11 +150,11 @@ class ControllerApiSistema extends ControllerApiBase {
         //     return $response->withJson($aDados, 200);
         // }
 
-        // $aDados = array("status" => false, 
+        // $aDados = array("status" => false,
         //                 "mensagem" =>$mensagem ,
         //                 "sqlgerado" => $sSql);
 
-        // return $response->withJson($aDados, 200);        
+        // return $response->withJson($aDados, 200);
     }
 
 
