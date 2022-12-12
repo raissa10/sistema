@@ -22,5 +22,10 @@ https://boleto.cloud/app/dev/api
 # Criar uma tela de venda e ao final gerar um boleto usando a opção sandbox free
 https://sandbox.boletocloud.com/api
 
+1 - Criar a tela de Venda no sistema - com produtos fixados na sala de aula
+
+2 - Criar o botal finalizar venda - Apos finalizar, gerar o boleto free
+
+3 - Criar a consulta de boletos emitidos
 
 
