@@ -80,6 +80,7 @@ class Routes {
             
             // AULA 13-12-2022 - Ações da Consulta
             $app->post('/excluirusuario', ControllerApiSistema::class . ':excluirUsuario');
+            $app->post('/executaalteracao', ControllerApiSistema::class . ':alteraUsuario');
 
         })->add($this->getMiddlewares());
 

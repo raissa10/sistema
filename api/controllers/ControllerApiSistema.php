@@ -165,15 +165,13 @@ class ControllerApiSistema extends ControllerApiBase {
         $usucodigo = isset($body["usucodigo"]) ? $body["usucodigo"] : false;
         $usunome  = $body["usunome"];
         $usuemail = $body["usuemail"];
-        $ususenha = $body["ususenha"];
         $usuativo = intval($body["usuativo"]);
         
         if($usucodigo && intval($usucodigo) > 1){
             $sql_update_usuario = "UPDATE public.tbusuario SET 
                                           usunome  = '$usunome',
                                           usuemail = '$usuemail',
-                                          ususenha = '$ususenha',
-                                          usuativo = $usuativo,
+                                          usuativo = $usuativo
                                     WHERE usucodigo = $usucodigo";
 
             $executaQuery = $this->getQuery()->executaQuery($sql_update_usuario);

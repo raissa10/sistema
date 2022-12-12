@@ -144,7 +144,12 @@
     }
 
     function alterarUsuario(codigoUsuario){
-        alert("Ação Não implementada ainda!");
+        //alert("Ação Não implementada ainda!");
+
+        // Seta o codigo do usuario na session para alteracao
+        sessionStorage.setItem("usucodigo", codigoUsuario);
+
+        window.location.href = "alterar-usuario-modelo.html";
     }
 
 </script>
