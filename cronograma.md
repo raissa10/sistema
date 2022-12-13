@@ -13,6 +13,8 @@ Consumindo API de Terceiros
 * Dashboard ASAAS - https://www.asaas.com/dashboard/index
 * CHAVE-API-ASAAS:$aact_YTU5YTE0M2M2N2I4MTliNzk0YTI5N2U5MzdjNWZmNDQ6OjAwMDAwMDAwMDAwMDAyNDUxNzk6OiRhYWNoXzJlZWUyNmVkLWJlNTctNDljMS1hOTE1LTU0NDU3N2JkYzRlOQ==
 
+* Preços Asaas 
+    * https://www.asaas.com/config/index?tab=customerPlan
 * RESETAR CHAVE API, APOS MOSTRAR AOS ALUNOS!
 
 ## Api de imagem de café
